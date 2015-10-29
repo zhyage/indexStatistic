@@ -1,0 +1,32 @@
+{
+  "name": "jsv",
+  "version": "0.0.2",
+  "authors": [
+    "mythz"
+  ],
+  "main": "JSV.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "jsv"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/eflexsystems/jsv",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.2",
+    "commit": "1f4a6938a771d2f6838518d16c3a65577f1ac52b"
+  },
+  "_source": "https://github.com/eflexsystems/jsv.git",
+  "_target": "~0.0.2",
+  "_originalSource": "jsv"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "public",
+  "authors": [
+    "zhy <zhyage@yeah.net>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "blockUI": "jquery.blockUI#*",
+    "handsontable": "~0.19.0",
+    "underscore": "~1.8.3",
+    "jsonform": "*",
+    "jsv": "~0.0.2",
+    "mathjs": "~2.4.0"
+  }
+}

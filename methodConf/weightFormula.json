@@ -1,0 +1,18 @@
+{
+  "allFormula": [
+    {
+      "buttonName": "行算术平均法",
+      "name": "AHP_RAM",
+      "formula": "x",
+      "hints": "x: 矩阵数据", 
+      "parameters" : []
+    },
+    {
+      "buttonName": "假的方法",
+      "name": "fake",
+      "formula": "x, y",
+      "hints": "x: 矩阵数据, y: 假设的y参数", 
+      "parameters" : [{ "name":"y", "hint":"假设的y参数 1:增加 2:减少"}]
+    }
+  ]
+}

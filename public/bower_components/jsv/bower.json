@@ -1,0 +1,23 @@
+{
+  "name": "jsv",
+  "version": "0.0.0",
+  "authors": [
+    "mythz"
+  ],
+  "main": "JSV.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "jsv"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/eflexsystems/jsv",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

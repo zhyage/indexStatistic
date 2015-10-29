@@ -1,0 +1,20 @@
+{
+  "allFormula": [
+    {
+      "buttonName": "广义指数法-极值化",
+      "name": "gyzsf_jiZhiFa",
+      "formula": "x, y",
+      "hints": "x: 选择源数据, y: 正指标或逆指标 1:正指标 2:逆指标", 
+      "parameters" : [  { "name":"y", "hint":"正指标或逆指标 1:正指标 2:逆指标"}],
+      "defaultSuffixName" : "gyzsf-jiZhiFa" 
+    },
+    {
+      "buttonName": "广义指数法-均值化",
+      "name": "gyzsf_junZhiFa",
+      "formula": "x, y",
+      "hints": "x: 选择源数据, y: 正指标或逆指标 1:正指标 2:逆指标",
+      "parameters" : [  { "name":"y", "hint":"正指标或逆指标 1:正指标 2:逆指标"}],
+      "defaultSuffixName" : "gyzsf-junZhiFa"
+    }
+  ]
+}
