@@ -1,0 +1,139 @@
+extends layout
+
+block content
+    script(type='text/javascript', src='bower_components/jquery/dist/jquery.min.js')
+    |   
+    script(type='text/javascript', src='bower_components/jquery-ui/jquery-ui.min.js')
+    |  
+    |   
+    script(type='text/javascript', src='bower_components/blockUI/jquery.blockUI.js')
+    |  
+    |   
+    script(type='text/javascript', src='bower_components/bootstrap/dist/js/bootstrap.min.js')
+    |   
+    script(src='javascripts/ele2.js')
+    |   
+    script(src='javascripts/matrixLocalStorageHandle.js')
+    |   
+    script(src='javascripts/normalComputing.js')
+    |   
+    script(src='javascripts/submitMath2Server.js')
+    // Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop
+    .row
+      .col-xs-4.col-md-4
+        h4
+          | target variable:
+        |      
+        #target_variable  
+        |      
+        textarea#targetVar.col-xs-12(rows='1', name='textarea', placeholder='Text Area')
+        |      
+        h4
+          | Source data:
+        |     
+        #colNameList
+      |   
+      |   
+      .col-xs-1.col-md-1
+        #equal
+          | = 
+          br
+      |   
+      .col-xs-7.col-md-7
+        h4
+          | nemericExpressions:
+        |    
+        #numericExpressions_title
+          textarea#numericExpressions.col-xs-12(rows='5', name='textarea', placeholder='Text Area')
+        |   
+        .row.spacer
+          .span4 .
+        |   
+        .col-md-6.column
+          .row.clearfix
+            .btn-group
+              button.btn.btn-default(type='button', onclick="modifyExpression('+')") +
+              |         
+              button.btn.btn-default(onclick="modifyExpression('<')", type='button') &lt;
+              |         
+              button.btn.btn-default(onclick="modifyExpression('>')", type='button') &gt;
+              |         
+              button.btn.btn-default(onclick="modifyExpression('7')", type='button') 7
+              |         
+              button.btn.btn-default(onclick="modifyExpression('8')", type='button') 8
+              |         
+              button.btn.btn-default(onclick="modifyExpression('9')", type='button') 9
+          |     
+          .row.clearfix
+            .btn-group
+              button.btn.btn-default(onclick="modifyExpression('-')", type='button') -
+              |         
+              button.btn.btn-default(onclick="modifyExpression('<=')", type='button') &lt=
+              |         
+              button.btn.btn-default(onclick="modifyExpression('>=')", type='button') &gt=
+              |         
+              button.btn.btn-default(onclick="modifyExpression('4')", type='button') 4
+              |         
+              button.btn.btn-default(onclick="modifyExpression('5')", type='button') 5
+              |         
+              button.btn.btn-default(onclick="modifyExpression('6')", type='button') 6
+          |     
+          .row.clearfix
+            .btn-group
+              button.btn.btn-default(onclick="modifyExpression('*')", type='button') x
+              |         
+              button.btn.btn-default(onclick="modifyExpression('=')", type='button') =
+              |         
+              button.btn.btn-default(onclick="modifyExpression('<>')", type='button') &lt;&gt;
+              |         
+              button.btn.btn-default(onclick="modifyExpression('1')", type='button') 1
+              |         
+              button.btn.btn-default(onclick="modifyExpression('2')", type='button') 2
+              |         
+              button.btn.btn-default(onclick="modifyExpression('3')", type='button') 3
+          |     
+          .row.clearfix
+            .btn-group
+              button.btn.btn-default(onclick="modifyExpression('%')", type='button') %
+              |         
+              button.btn.btn-default(onclick="modifyExpression('&')", type='button') &amp;
+              |         
+              button.btn.btn-default(onclick="modifyExpression('|')", type='button') |
+              |         
+              button.btn.btn-default(onclick="modifyExpression('0')", type='button') 0
+              |         
+              button.btn.btn-default(onclick="modifyExpression('.')", type='button') .
+          |     
+          .row.clearfix
+            .btn-group
+              button.btn.btn-default(onclick="modifyExpression('xy')", type='button') xy
+              |         
+              button.btn.btn-default(onclick="modifyExpression('(')", type='button') (
+              |         
+              button.btn.btn-default(onclick="modifyExpression(')')", type='button') )
+              |         
+              button.btn.btn-default(type='button') delete
+        |   
+        .col-md-6.column
+          .row.clearfix
+            .btn-group
+              button.btn.btn-default(onclick="modifyExpression('abs(?)')", type='button') abs(x)
+              |         
+              button.btn.btn-default(onclick="modifyExpression('cos(?)')", type='button') cos(x)
+          |     
+          .row.clearfix
+            .btn-group
+              button.btn.btn-default(onclick="modifyExpression('sin(?)')", type='button') sin(x)
+              |         
+              button.btn.btn-default(onclick="modifyExpression('tan(?)')", type='button') tan(x)
+    .row.spacer
+      .span4 .
+    // Columns are always 50% wide, on mobile and desktop
+    .row
+      .col-xs-6
+        #formularCommitButton.col-md-6.column
+          button.btn.btn-default(type='button') commit
+      |   
+      .col-xs-6
+        #formularCancelButton.col-md-6.column
+          button.btn.btn-default(type='button') cancel

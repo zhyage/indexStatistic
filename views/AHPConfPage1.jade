@@ -1,0 +1,74 @@
+extends layout
+
+block content
+    script(type='text/javascript', src='bower_components/jquery/dist/jquery.min.js')
+    |       
+    script(type='text/javascript', src='bower_components/jquery-ui/jquery-ui.min.js')
+    |  
+    |       
+    script(type='text/javascript', src='bower_components/blockUI/jquery.blockUI.js')
+    |  
+    |       
+    script(type='text/javascript', src='bower_components/bootstrap/dist/js/bootstrap.min.js')
+    |       
+    script(type='text/javascript', src='bower_components/mathjs/dist/math.min.js')
+    |       
+    script(type='text/javascript', src='bower_components/underscore/underscore-min.js')
+    |       
+    script(src='bower_components/handsontable/dist/handsontable.full.min.js')
+    |       
+    link(rel='stylesheet', media='screen', href='bower_components/handsontable/dist/handsontable.full.min.css')
+    |       
+    script(src='javascripts/matrixLocalStorageHandle.js')
+    |       
+    script(src='javascripts/ele2.js')
+    |       
+    script(src='javascripts/submitMath2Server.js')
+    |       
+    script(src='javascripts/AHPConfPage1.js')
+    |       
+    .row
+      .col-xs-4.col-md-4
+        // <div id="participants"> please select participant source data: <br> </div>
+        h4
+          | Please select participant source data:
+        |           
+        #sourceDataList
+        // <div id = "weightMethodSelect"> please select weight compute method : <br> </div>
+        h4
+          | Please select weight compute method :
+        |           
+        #weightMethodList
+      |         
+      .col-xs-6.col-md-6
+        // <div id="scaleLevel">Please fill the matrix : <br> </div>
+        h4
+          | Please fill the matrix :
+        |           
+        #AHPMatrix
+    |       
+    .row
+      h3
+    |         
+    .row
+      .col-xs-6
+        #AHPConfPage1CommitButton.col-md-6.column
+          button.btn.btn-default(type='button') commit
+      |           
+      .col-xs-6
+        #AHPConfPage1CancelButton.col-md-6.column
+          button.btn.btn-default(type='button') cancel
+    |         
+    #parameterHintFrm(style='display:none')
+      #HintInputMethod  
+      |           
+      #HintParameterList  
+      |           
+      #HintComment  
+      |           
+      .row.clearfix
+        #HintYesButton.col-md-6.column
+          button.btn.btn-default(type='button') commit
+        |            
+        #HintCancelButton.col-md-6.column
+          button.btn.btn-default(type='button') cancel
