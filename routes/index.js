@@ -126,19 +126,23 @@ module.exports = function(passport) {
 
     router.post('/saveToServer', isAuthenticated, function(req, res, next) {
         var saveInfo = req.body;
-        var fileName = saveInfo.fileName;
+        var userName = req.user.username;
+        var fileName = userName + '/' + saveInfo.fileName;
         var matrixString = JSON.stringify(saveInfo.matrix);
         res.send(saveAndLoad.saveMatrix(fileName, matrixString));
     });
 
     router.post('/loadFileFromServer', isAuthenticated, function(req, res, next) {
         var loadInfo = req.body;
-        var fileName = loadInfo.fileName;
+        var userName = req.user.username;
+        var fileName = userName + '/' + loadInfo.fileName;
         res.send(saveAndLoad.loadMatrix(fileName));
     });
 
     router.post('/getSaveFileList', isAuthenticated, function(req, res, next) {
-        res.send(saveAndLoad.getSavedFileList());
+        var userName = req.user.username;
+        var path = userName;
+        res.send(saveAndLoad.getSavedFileList(path));
     });
 
     router.post('/toGetBiaoZhunFaConf', isAuthenticated, function(req, res, next) {

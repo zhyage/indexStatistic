@@ -28,9 +28,9 @@ function loadMatrix(fileName){
 
 }
 
-function getSavedFileList() {
+function getSavedFileList(path) {
     var fileList = [];
-    fileList = fs.readdirSync("public/dataSave/");
+    fileList = fs.readdirSync("public/dataSave/" + path);
     var fileListStr = JSON.stringify(fileList);
     console.info("fileListStr = ", fileListStr);
     return fileListStr;

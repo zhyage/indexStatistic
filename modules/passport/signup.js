@@ -1,6 +1,7 @@
 var LocalStrategy   = require('passport-local').Strategy;
 var User = require('../../modules/user');
 var bCrypt = require('bcrypt-nodejs');
+var fs = require('fs');
 
 module.exports = function(passport){
 
@@ -40,6 +41,10 @@ module.exports = function(passport){
                                 throw err;  
                             }
                             console.log('User Registration succesful');    
+                            var dir = 'public/dataSave/' + username;
+                            if (!fs.existsSync(dir)) {
+                                fs.mkdirSync(dir);
+                            }
                             return done(null, newUser);
                         });
                     }
