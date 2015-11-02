@@ -1,0 +1,154 @@
+extends layout
+
+block content
+    script(type='text/javascript', src='bower_components/jquery/dist/jquery.min.js')
+    |   
+    script(type='text/javascript', src='bower_components/jquery-ui/jquery-ui.min.js')
+    |  
+    |   
+    script(type='text/javascript', src='bower_components/blockUI/jquery.blockUI.js')
+    |  
+    |   
+    script(type='text/javascript', src='bower_components/bootstrap/dist/js/bootstrap.min.js')
+    |   
+    script(src='bower_components/handsontable/dist/handsontable.full.min.js')
+    |   
+    link(rel='stylesheet', media='screen', href='bower_components/handsontable/dist/handsontable.full.min.css')
+    |   
+    script(type='text/javascript', src='bower_components/underscore/underscore-min.js')
+    |   
+    script(src='javascripts/ele2.js')
+    |   
+    script(src='javascripts/test4.js')
+    |   
+    script(src='javascripts/matrixLocalStorageHandle.js')
+    |   
+    #wrapper
+      #contentliquid
+        #hot
+      #cssmenu
+        ul
+          li.active.has-sub
+            a(href='#')
+              span File
+            |     
+            ul
+              li
+                a#Load(href='#')
+                  span Load
+              |     
+              li
+                a#Save(href='#')
+                  span Save
+              |     
+              li
+                a#Import(href='#')
+                  span Import
+              |     
+              li.last
+                a#Export(href='#')
+                  span Export
+          |    
+          li.has-sub
+            a(href='#')
+              span Edit
+            |     
+            ul
+              li
+                a#New(href='#')
+                  span New
+              |     
+              li
+                a#InsertCB(href='#')
+                  span Insert column before
+              |     
+              li
+                a#InsertCA(href='#')
+                  span Insert column after
+              |     
+              li
+                a#InsertRB(href='#')
+                  span Insert row before
+              |     
+              li
+                a#InsertRA(href='#')
+                  span Insert row after
+              |     
+              li
+                a#DeleteColumn(href='#')
+                  span Delete column
+              |      
+              li.last
+                a#DeleteRow(href='#')
+                  span Delete row
+          |   
+          li.has-sub
+            a(href='#')
+              span Operate
+            |     
+            ul
+              li
+                a#calculate(href='#')
+                  span normal calculate
+              |     
+              li
+                a#purifyData(href='#')
+                  span purify Data
+              |     
+              li.has-sub
+                a(href='#')
+                  span column weight calculate
+                |       
+                ul
+                  li
+                    a#AHPWeight(href='#')
+                      span &#x5C42;&#x6B21;&#x5206;&#x6790;&#x6CD5;
+                  |         
+                  li.has-sub
+                    a(href='#')
+                      span weight 2
+                    |           
+                    ul
+                      li
+                        a(href='#')
+                          span Sub Product
+                      |             
+                      li.last
+                        a(href='#')
+                          span Sub Product
+                  |         
+                  li.last
+                    a(href='#')
+                      span weight 3
+              //
+                <li><a id="InsertRA" href='#'><span>Insert row after</span></a></li>
+                <li><a id="DeleteColumn" href='#'><span>Delete column</span></a></li>
+                <li class='last'><a id= "DeleteRow" href='#'><span>Delete row</span></a></li>
+          //
+            <li class='has-sub'><a href='#'><span>Products</span></a>
+            <ul>
+            <li class='has-sub'><a href='#'><span>Product 1</span></a>
+            <ul>
+            <li><a href='#'><span>Sub Product</span></a></li>
+            <li class='last'><a href='#'><span>Sub Product</span></a></li>
+            </ul>
+            </li>
+            <li class='has-sub'><a href='#'><span>Product 2</span></a>
+            <ul>
+            <li><a href='#'><span>Sub Product</span></a></li>
+            <li class='last'><a href='#'><span>Sub Product</span></a></li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+          li
+            a(href='#')
+              span About
+          li.last
+            a(href='#')
+              span Contact
+      #rightcolumn
+        form#editFrm(name='editForm')
+    #insertForm(style='display:none')
+      // <form name ="insertFor" id="insertFrm" action="#">
+      form#insertFrm(name='insertFor')

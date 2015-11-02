@@ -1,0 +1,69 @@
+extends layout
+
+block content
+    script(type='text/javascript', src='bower_components/jquery/dist/jquery.min.js')
+    |       
+    script(type='text/javascript', src='bower_components/jquery-ui/jquery-ui.min.js')
+    |  
+    |       
+    script(type='text/javascript', src='bower_components/blockUI/jquery.blockUI.js')
+    |  
+    |       
+    script(type='text/javascript', src='bower_components/bootstrap/dist/js/bootstrap.min.js')
+    |       
+    script(type='text/javascript', src='javascripts/bower_components/mathjs/dist/math.js')
+    |       
+    script(type='text/javascript', src='bower_components/underscore/underscore-min.js')
+    |       
+    script(src='javascripts/matrixLocalStorageHandle.js')
+    |       
+    script(type='text/javascript', src='javascripts/biaoZhunHua.js')
+    |       
+    script(src='javascripts/ele2.js')
+    |       
+    script(src='javascripts/submitMath2Server.js')
+    // Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop
+    .row
+      .col-xs-4.col-md-4
+        h4
+          | method list:
+        |           
+        #methodList
+      |         
+      .col-xs-4.col-md-4
+        h4
+          | Source data:
+        |           
+        #colNameList
+      |           
+      .col-xs-4.col-md-4
+        h4
+          | Target formular :
+        |             
+        #formularShow
+          textarea#numericExpressions.col-xs-10(rows='30', name='textarea', placeholder='Text Area')
+    // Columns are always 50% wide, on mobile and desktop
+    .row
+      .col-xs-6
+        #formularCommitButton.col-md-6.column
+          button.btn.btn-default(type='button') commit
+      |           
+      .col-xs-6
+        #formularCancelButton.col-md-6.column
+          button.btn.btn-default(type='button') cancel
+    |   
+    #parameterHintFrm(style='display:none')
+      #HintInputSrcData  
+      |     
+      #HintTargetName  
+      |     
+      #HintParameterList  
+      |     
+      #HintComment  
+      |     
+      .row.clearfix
+        #HintYesButton.col-md-6.column
+          button.btn.btn-default(type='button') commit
+        |     
+        #HintCancelButton.col-md-6.column
+          button.btn.btn-default(type='button') cancel
