@@ -1,0 +1,45 @@
+{
+    "allFormular" :[
+        {
+            "buttonName" : "abc",
+            "name" : "abc",
+            "defaultPrefixName" : "abc",
+            "parameterList" : [
+                {
+                    "name" : "parameter1",
+                    "type" : "selectInput",
+                    "optionList" : ["a", "b", "c"],
+                    "hints" : "a : a parameter; b: b parameter; c : c parameter",
+                    "defaultValue" : "b"
+                },
+                {
+                    "name" : "parameter2",
+                    "type" : "normalInput",
+                    "hints" : "please input parameter2",
+                    "defaultValue" : "333"
+                }
+            ],
+            "valifyFunction" :"abcVerifyFunction"
+        },
+        {
+            "buttonName" : "xyz",
+            "name" : "xyz",
+            "defaultPrefixName" : "xyz",
+            "parameterList" : [
+                {
+                    "name" : "xyz_parameter1",
+                    "type" : "selectInput",
+                    "optionList" : ["x", "y", "z"],
+                    "hints" : "x : x parameter; y: y parameter; z : z parameter",
+                    "defaultValue" : "z"
+                },
+                {
+                    "name" : "xyz_parameter2",
+                    "type" : "normalInput",
+                    "hints" : "please input parameter2"
+                }
+            ],
+            "valifyFunction" :"xyzVerifyFunction"
+        }
+    ]
+}
